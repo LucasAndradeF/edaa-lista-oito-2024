@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Ordenacao {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<String> nomes = new ArrayList<>();
         try {
             File file = new File(
@@ -18,6 +18,7 @@ public class Ordenacao {
             while ((line = br.readLine()) != null) {
                 nomes.add(line);
             }
+            br.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
